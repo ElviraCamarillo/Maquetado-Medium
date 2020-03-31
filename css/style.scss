@@ -284,6 +284,35 @@ body{
     }
     .container--medium{
         flex-direction: row;
-    }
+    } 
+}
 
+/*--- HEADER ---*/
+@media (max-width: 767px) {
+  img#wordMark {
+    display: none;
+  }
+  a#bookmarks, a#newPost{
+      display: none;
+  }
+}
+
+@media (min-width: 768px){
+  img#monoGram{
+      display: none;
+  }
+}
+
+div.navBar{
+  overflow: auto;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  a{
+      display: inline-block;
+      color: rgb(136, 133, 133);
+      text-align: center;
+      padding: 14px;
+      text-decoration: none;
+  }
 }

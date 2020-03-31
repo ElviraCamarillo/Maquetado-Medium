@@ -309,4 +309,36 @@ body {
             flex-direction: row;
   }
 }
+
+/*--- HEADER ---*/
+@media (max-width: 767px) {
+  img#wordMark {
+    display: none;
+  }
+  a#bookmarks, a#newPost {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  img#monoGram {
+    display: none;
+  }
+}
+
+div.navBar {
+  overflow: auto;
+  white-space: nowrap;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+div.navBar a {
+  display: inline-block;
+  color: #888585;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
