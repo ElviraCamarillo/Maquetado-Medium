@@ -341,4 +341,201 @@ div.navBar a {
   padding: 14px;
   text-decoration: none;
 }
+
+.title-post {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.img-guys {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.img-guys .content-img-guys {
+  position: absolute;
+  top: -20px;
+}
+
+.color-secondary {
+  color: #757575;
+}
+
+.icon-point {
+  font-size: 10px;
+}
+
+.icon-star {
+  font-size: 14px;
+}
+
+.icon-points {
+  font-size: 7.5px;
+  color: #757575;
+  cursor: pointer;
+}
+
+.icon-points:hover {
+  color: #000000;
+}
+
+.author-info {
+  cursor: pointer;
+}
+
+.container-dialog, .dialog-company {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: -1.5%;
+  left: -21%;
+}
+
+.container-dialog .card, .dialog-company .card {
+  width: 280px !important;
+  height: 250px !important;
+  -webkit-box-shadow: 0px 2px 5px 1px #a199a1 !important;
+          box-shadow: 0px 2px 5px 1px #a199a1 !important;
+  font-size: 14px;
+}
+
+.container-dialog .card .card-body, .dialog-company .card .card-body {
+  width: 200px !important;
+}
+
+.container-dialog .card .card-body .name-title, .dialog-company .card .card-body .name-title, .dialog-company .card .card-body .name-company {
+  font-weight: bold;
+}
+
+.container-dialog .card .card-body .description-title, .dialog-company .card .card-body .description-title {
+  color: #229e7d;
+}
+
+.container-dialog .triangle, .dialog-company .triangle, .dialog-company .triangle-company {
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-top: 10px solid #ffffff;
+  -webkit-filter: drop-shadow(0px 2px 1px #a199a1);
+          filter: drop-shadow(0px 2px 1px #a199a1);
+}
+
+.paragraph-description {
+  color: #757575;
+}
+
+.hr-footer {
+  width: 92.5%;
+  margin-top: 2px;
+  margin-bottom: 0px;
+  border: 1px solid #eeeeee;
+  border-radius: 1px;
+}
+
+.img-avatar {
+  border: 3px solid #229e7d;
+}
+
+.btn-follow {
+  border: 1px solid #229e7d;
+  color: #229e7d;
+  font-size: 12.5px;
+}
+
+.btn-follow:hover {
+  border: 1px solid #05ad80;
+  color: #05ad80;
+}
+
+.time-info {
+  cursor: pointer;
+  color: #757575;
+  font-size: 12.5px;
+}
+
+.time-dialog {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 82%;
+  left: -22%;
+}
+
+.time-dialog .time-paragraph {
+  width: 100px;
+  height: 20px;
+  background-color: rgba(0, 0, 0, 0.55);
+  font-size: 12px;
+}
+
+.time-dialog .time-triangle {
+  z-index: 3;
+  width: 0;
+  height: 0;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, 0.75);
+  -webkit-filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.55));
+          filter: drop-shadow(0px 1px 1px rgba(0, 0, 0, 0.55));
+}
+
+.dialog-company {
+  top: 14%;
+  left: -5%;
+}
+
+.dialog-company .card {
+  width: 270px !important;
+  height: 200px !important;
+  -webkit-box-shadow: 0px 2px 5px 1px #a199a1 !important;
+          box-shadow: 0px 2px 5px 1px #a199a1 !important;
+  font-size: 14px;
+}
+
+.dialog-company .card .card-body {
+  width: 200px !important;
+}
+
+.post-stack .title-post-stack {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.post-stack h6 {
+  font-size: 13px;
+}
+
+.post-stack .time-info-stack {
+  color: #757575;
+  font-size: 12px;
+}
+
+.post-stack .card-img {
+  width: 100%;
+  height: 82%;
+  overflow: hidden;
+  position: relative;
+}
+
+.btn-see-editors {
+  color: #229e7d;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn-see-editors:hover {
+  color: #05ad80;
+}
+
+@media (max-width: 768px) {
+  .container-dialog, .dialog-company {
+    display: none;
+    background-color: #000000;
+  }
+}
 /*# sourceMappingURL=style.css.map */

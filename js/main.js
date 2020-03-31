@@ -195,3 +195,125 @@ $('#bottomPostsLists').on('click', '.card-item-container', function(){
     // get del post
     getPostById(idPost)
 })
+
+
+//--------------------------------------------------POSTS RECENT UP
+avatarArray = []
+
+  //------For company------
+  $( ".company-info" ).hover(
+    function() {
+      $( this ).find(".company-dialog").append(`
+      <span class="dialog-company d-flex flex-column align-items-center">
+      <div class="card-dialog-company">
+        <div class="card border border-0">
+          <div class="card-body d-flex justify-content-between">
+              <div>
+                  <h5 class="card-title name-company">Logistic Company</h5>
+                  <p class="card-text paragraph-description">The undercurrents, of the future. A Medium publication, about tech and science. Former Medicare. https://twitter.com/ASlavitt</p>
+              </div>
+              <span class=""><img src="./assets/img/ico-company.jpg" class="rounded-sm ml-2" width="60" height="60" alt=""><img/></span>
+          </div>
+          <hr class="hr-footer align-self-center">
+          <div class="d-flex justify-content-between align-items-baseline p-2">
+            <p class="paragraph-description">Followed <strong>by 8.9K</strong> people</p>
+            <a href="#" class="btn btn-follow">Follow</a>
+          </div>
+        </div>                        
+      </div>
+      <span class="triangle-company"></span>
+      </span>
+      `)
+    }, function() {
+      $(".dialog-company").hide('slow',
+        function(){ $(this).remove()
+      })
+    }
+)
+
+//------Cuadro de dialogo oscuro-----
+$( ".time-info" ).hover(
+  function() {
+    $( this ).append(`
+    <span class="time-dialog d-flex flex-column align-items-center">
+      <div class="time-paragraph text-center text-white rounded-sm">
+        <p>Updated Mar 30</p>                              
+      </div>
+      <span class="time-triangle"></span>
+    </span>
+    `)
+  }, function() {
+    $(".time-dialog").after().remove()
+  }
+)
+
+const printAvatar = () => {
+  $(".container-dialog").empty();
+  avatarArray.forEach((avatar,index) => {
+    console.log(avatar.picture.medium)
+    $( ".author-info" ).hover(
+      function() {
+        $( this ).find(".show-dialog").append(`
+        <span class="container-dialog d-flex flex-column align-items-center">
+        <div class="card-dialog">
+          <div class="card border border-0">
+            <div class="card-body d-flex justify-content-between">
+                <div>
+                    <h5 class="card-title name-title">${avatar.name.first} ${avatar.name.last}</h5>
+                    <h6 class="card-title description-title">Medium member since Mar 2020</h6>
+                    <p class="card-text paragraph-description">Former Medicare, Medicaid & ACA head for Pres. Barack Obama. https://twitter.com/ASlavitt</p>
+                </div>
+                <span class=""><img src="${avatar.picture.medium}" class="rounded-circle img-avatar ml-3" width="60" height="60" alt="${avatar.name.first}"><img/></span>
+            </div>
+            <hr class="hr-footer align-self-center">
+            <div class="d-flex justify-content-between align-items-baseline p-2">
+              <p class="paragraph-description">Followed <strong>by 8.9K</strong> people</p>
+              <a href="#" class="btn btn-follow">Follow</a>
+            </div>
+          </div>                        
+        </div>
+        <span class="triangle"></span>
+    </span>
+        `)
+      }, function() {
+        $(".container-dialog").hide('slow',
+          function(){ $(this).remove()
+        })
+      }
+  )
+  })
+}
+
+//${avatar.name.title} ${avatar.name.first[0]} ${avatar.name.last}
+
+const getAvtarFromRandomUser = () => {
+  console.log('Descarga Completada')
+    avatarArray = []
+    $.ajax({
+        url:'https://randomuser.me/api/',
+        method:"GET",
+        success:(response)=>{
+            $.each(response.results,(key,value)=>{
+              avatarArray.push({...value,key})
+                console.log(value.picture.medium)
+                console.log(  avatarArray)
+            })
+            printAvatar();
+        }
+    })
+}
+
+const isMobile = () => {
+    if($(window).width() < 767) {
+      $(".author-info").on("click", () => {
+        $(".dialog-company").remove()
+        console.log("borrando con click")
+      })
+      console.log("es vista movil")
+    }
+
+}
+
+  getAvtarFromRandomUser()
+
+  isMobile()
