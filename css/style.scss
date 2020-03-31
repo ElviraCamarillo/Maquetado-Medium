@@ -148,14 +148,12 @@
     margin-left: auto;
     margin-right: auto;
     flex-direction: column;
-
 }
 body{
     font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
 }
   
-.card-container 
-{
+.card-container {
     align-items: stretch;
     font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
     .card-text{
@@ -250,6 +248,22 @@ body{
         font-size: 16px;
         margin-right: 1rem;
     }
+}
+.full-image-post{
+    width: 100%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.card-infoPost{
+    font-size: 16px;
+    color: #8f8f8f;
+}
+.card-infoPost span{
+    display: inline;
+    text-decoration: none;
+    color: #292929;
 }
 
 
