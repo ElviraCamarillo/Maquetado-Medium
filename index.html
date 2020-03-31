@@ -31,10 +31,75 @@
         </div>
         <!-- ROW 2: POST POPULAR: --GABS-- -->
         <div class="row">
-            <div class="col-12 col-md-6 border border-primary p-5">List POsts</div>
-            <div class="col-12 col-md-6 border border-primary p-5">Popular on medium</div>
-            <div class="col-12 d-md-none bg-success border border-primary p-5">Rest of poststs (ocultar en lg)</div>
+            <div class="container--medium d-flex" id="bottomPostsLists">
+                <!-- container left -->
+                <div class="pt-2 list-post-left pl-4 pl-md-0 pr-4 pr-md-4" id="listPostCenter">
+                    <!-- items  listPostCenter -->     
+                </div>
+                <!-- container right -->
+                <div class="list-post-right">
+                    <div class="post-title mb-3 pl-4 pr-4 pl-md-0 pr-md-0">
+                        <h2 class="post-title-top">Popular on Medium</h2>
+                    </div>
+                    <!-- item article -->
+                    <div id="sidebarPost">
+                      <!-- sidebar content post   -->
+                    </div>
+                
+                    
+                    <div class="post-footer d-none d-md-block ">
+                        <ul class="pt-2 list-footer">
+                            <li><a href=""https://help.medium.com"">Help</a> </li>
+                            <li><a href=""https://medium.statuspage.io"">Status</a> </li>
+                            <li><a href=""https://medium.com/creators"">Writers</a> </li>
+                            <li><a href="href="https://medium.com/3minread"">Blog</a></li>
+                            <li><a href=""https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e"">Careers</a> </li>
+                            <li><a href=""https://medium.com/policy/f03bf92035c9" title="Read Medium’s policies" ">Privacy</a> </li>
+                            <li><a href=""//medium.com/policy/9db0094a1e0f"">Terms</a> </li>
+                            <li><a href=""https://about.medium.com" title="More about Medium"">about</a> </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- container hidden -->
+                <div class="d-md-none list-post-left px-4" id="listPostBottom">
+                    <!-- articles listPostBottom only mobile -->
+                </div>
+               
+            </div>
         </div>
+
+        <!-- Modal Post-->
+        <!-- Modal -->
+        <div class="modal fade" id="modalPostPreview" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="text-left font-weight-bold modal-title" id="exampleModalLongTitle">4 Hidden Python Features that Beginners should Know</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <p class="card-infoPost mb-0">
+                        <span class="card-author"></span>
+                        in 
+                        <span class="card-group"></span>
+                    </p>
+                    <p class="card-datePost">
+                        <span class="card-date"></span>
+                        ·
+                        <span class="card-minread"></span> min read
+                    </p>
+                    <div class="mb-4 full-image-post"> </div>
+                    <p class="card-abstract"></p>
+                    <p class="card-description"></p>
+                    
+                </div>
+                
+            </div>
+            </div>
+        </div>
+       
     </div>
     
    
