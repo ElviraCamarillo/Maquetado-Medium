@@ -16,6 +16,7 @@
 div.navBar {
   overflow: auto;
   white-space: nowrap;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
