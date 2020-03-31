@@ -1,24 +1,53 @@
 
-// objeto de mi post de ejemplo
+//objeto de mi post de ejemplo
 // var objetoPost = {
 //     title: ' The Most Underrated Tool in Data Science: NumPy',
 //     abstract: 'The power of NumPy and how to effectively use it',
 //     description: 'Data scientist often work with DataFrame, be it in R or Python.',
-//     urlImage: 'https://miro.medium.com/max/1400/0*RYK3nVzvv_Dq_KM8',
+//     urlImage: 'https://i.blogs.es/a19bfc/testing/450_1000.jpg',
 //     author: 'Soner Yildirim',
 //     createdAt: 'Feb 20',
 //     category: 'Towards Data Science',
 //     group: 'Popular on Medium',
 //     minToRead: '6'
 // }
+var postArray = [];
+const getPostData = () => {
+    let title = $("#title").val();
+    let abstract = $("#abstract").val();
+    let description = $("#description").val();
+    let urlImage = $("#urlImage").val();
+    let author = $("#author").val();
+    let createdAt = $("#createdAt").val();
+    let category = $("#category").val();
+    let group = $("#group").val();
+    let minToRead = $("#minToRead").val();
+
+    let postObject = {title, abstract, description, urlImage, author, createdAt, category, group, minToRead}
+
+    postArray.push(postObject)
+    addPostToDB(postObject)
+
+    console.log(`Ojeto de posts: ${postObject}`)
+    console.log(`Array de posts: ${postArray}`)
+}
+$("#save-post").on("click", () => {
+    console.log(`Array de posts: ${postArray}`)
+    getPostData()
+    $('#exampleModalCenter').modal('toggle');
+    return false;
+})
+
 // agregar post en base de datos
 const addPostToDB = (postObject) => {
+    postArray = []
     $.ajax({
         url:"https://javascript-ajax-d0ce6.firebaseio.com/Elvira/posts/.json",
         method:"POST",
         data:JSON.stringify(postObject),
         success:(response)=>{
            console.log(response)
+           getPostsLists()
         }
     
     })
@@ -197,7 +226,7 @@ $('#bottomPostsLists').on('click', '.card-item-container', function(){
 })
 
 
-//--------------------------------------------------POSTS RECENT UP
+//--------------------------------------------------POSTS RECENT UP--------------------------
 avatarArray = []
 
   //------For company------
