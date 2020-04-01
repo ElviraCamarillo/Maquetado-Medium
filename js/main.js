@@ -28,7 +28,7 @@ const getPostData = () => {
     postArray.push(postObject)
     addPostToDB(postObject)
 
-    console.log(`Ojeto de posts: ${postObject}`)
+    console.log(`Objeto de posts: ${postObject}`)
     console.log(`Array de posts: ${postArray}`)
 }
 $("#save-post").on("click", () => {
@@ -37,6 +37,17 @@ $("#save-post").on("click", () => {
     $('#exampleModalCenter').modal('toggle');
     return false;
 })
+
+var filteredArray = []  
+
+$("#searchBox").on("keyup",(event) => {   
+    let keyword = $(event.target).val();   
+    filteredArray = postArray.filter((post) => {
+             return post.category.contains(keyword)   
+            })
+            console.log(filteredArray);
+            console.log(keyword);
+        })
 
 // agregar post en base de datos
 const addPostToDB = (postObject) => {
@@ -346,3 +357,9 @@ const isMobile = () => {
   getAvtarFromRandomUser()
 
   isMobile()
+
+const searchBox = () => {
+    if($(window).width() > 767){
+        $()
+    }
+}

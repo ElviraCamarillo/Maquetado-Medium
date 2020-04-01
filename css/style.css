@@ -315,14 +315,17 @@ body {
   img#wordMark {
     display: none;
   }
-  a#bookmarks, a#newPost {
+  a#bookmarks, a#newPost, input#searchBox {
     display: none;
   }
 }
 
 @media (min-width: 768px) {
-  img#monoGram {
+  img#monoGram, a#search {
     display: none;
+  }
+  a#newPost {
+    white-space: nowrap;
   }
 }
 
