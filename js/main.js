@@ -80,8 +80,25 @@ const getPostById = (id) =>{
     })
 }
 
+function reverseObject(object) {
+    var newObject = {};
+    var keys = [];
+
+    for (var key in object) {
+        keys.push(key);
+    }
+
+    for (var i = keys.length - 1; i >= 0; i--) {
+        var value = object[keys[i]];
+        newObject[keys[i]]= value;
+    }       
+
+    return newObject;
+}
+
 const printPostCenter = (objectPost) =>{
-    console.log(objectPost)
+    //console.log(objectPost)
+    
     let min = 5
     let max = 14
     let counter = 0
@@ -210,9 +227,11 @@ const getPostsLists = () =>{
         method:"GET",
         success: (response) => {
             console.log(response)
-            printPostCenter(response)
-            printPostSidebar(response)
-            printPostBottom(response)
+            var orderedResponse = reverseObject(response)
+            console.log(orderedResponse)
+            printPostCenter(orderedResponse)
+            printPostSidebar(orderedResponse)
+            printPostBottom(orderedResponse)
         }
     })
 }
